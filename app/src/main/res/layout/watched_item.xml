@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/movieCardView"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center_horizontal"
+    android:backgroundTint="@color/GulfStream"
+    app:cardCornerRadius="10dp"
+    android:layout_marginBottom="15dp">
+
+    <TextView
+        android:id="@+id/title_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:textColor="@color/Cyprus"/>
+
+    <TextView
+        android:id="@+id/genre_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Genre"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        android:textSize="18dp"
+        android:textColor="@color/white"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginEnd="15dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/iconamoonstarfill"
+            android:layout_marginStart="5dp"/>
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/iconamoonstarfill"
+            android:layout_marginStart="5dp"/>
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/iconamoonstarfill"
+            android:layout_marginStart="5dp"/>
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/iconamoonstarfill"
+            android:layout_marginStart="5dp"/>
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/iconamoonstarfill"
+            android:layout_marginStart="5dp"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
