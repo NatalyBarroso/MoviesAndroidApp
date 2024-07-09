@@ -16,6 +16,7 @@ class MovieViewModel: ViewModel() {
     private var _movieList = MutableLiveData<List<MovieModel>>()
     val movieList: LiveData<List<MovieModel>> = _movieList
 
+
     fun getMovies() {
         viewModelScope.launch(Dispatchers.IO) {
             val response = RetrofitClient.webService.getMovies(Constants.API_KEY)
@@ -29,7 +30,10 @@ class MovieViewModel: ViewModel() {
         viewModelScope.launch(Dispatchers.IO) {
             val response = RetrofitClient.webService.getPopularMovies(Constants.API_KEY)
             withContext(Dispatchers.Main) {
-                _movieList.value = response.body()!!.results.sortedByDescending { it.averageVote }
+               // _movieList.value = response.body()!!.results.sortedByDescending { it.averageVote }
+                val top5Movies = response.body()!!.results.sortedByDescending { it.averageVote }.take(5)
+                _movieList.value = top5Movies
+
             }
         }
     }

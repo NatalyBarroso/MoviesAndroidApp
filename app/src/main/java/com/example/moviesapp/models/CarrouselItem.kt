@@ -1,6 +1,6 @@
 package com.example.moviesapp.models
 
-data class ImageItem(
+data class CarrouselItem(
     val id: String,
     val url: String
 )

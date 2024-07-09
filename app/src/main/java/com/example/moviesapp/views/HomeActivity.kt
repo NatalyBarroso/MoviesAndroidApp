@@ -2,26 +2,42 @@ package com.example.moviesapp.views
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.moviesapp.R
-import com.example.moviesapp.adapters.ImageAdapter
+import com.example.moviesapp.adapters.CarrouselAdapter
+import com.example.moviesapp.core.Constants.BASE_URL_IMAGE
 import com.example.moviesapp.databinding.ActivityHomeBinding
-import com.example.moviesapp.models.ImageItem
-import java.util.UUID
+import com.example.moviesapp.models.CarrouselItem
+import com.example.moviesapp.viewmodels.MovieViewModel
 
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomeBinding
-
+    private val viewModel: MovieViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val imageCarrousel = findViewById<RecyclerView>(R.id.imageCarousel)
+        val carrouselAdapter = CarrouselAdapter()
+        imageCarrousel.adapter = carrouselAdapter
 
-        val imageList = arrayListOf(
+        viewModel.movieList.observe(this) { movieList ->
+            val imageList = movieList.map { movie ->
+                CarrouselItem(
+                    movie.id,
+                    BASE_URL_IMAGE + movie.poster
+                )
+            }
+            carrouselAdapter.submitList(imageList)
+        }
+
+        viewModel.getPopularMovies()
+
+        /*val imageList = arrayListOf(
             ImageItem(
                 UUID.randomUUID().toString(),
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiPkGXMO-C4oQkP3xxd5_e8kIwrT5cbPQ7TA&s"
@@ -47,7 +63,7 @@ class HomeActivity : AppCompatActivity() {
 
         val imageAdapter = ImageAdapter()
         imageCarrousel.adapter = imageAdapter
-        imageAdapter.submitList(imageList)
+        imageAdapter.submitList(imageList)*/
 
         binding.catalogButton.setOnClickListener {
             val intent = Intent(this, MovieCatalogActivity::class.java)
