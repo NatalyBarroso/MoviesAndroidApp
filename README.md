@@ -1,4 +1,4 @@
-![prototype](./images/movietrackerapp.jpg)
+![prototype](app/images/prototype.jpg)
 
 ## Movie Tracker App
 
@@ -24,8 +24,9 @@ Movie Tracker es una aplicación de Android desarrollada en Kotlin que permite a
 
   1. Clona el reposotorio:
      ```sh
-   git clone https://github.com/tu_usuario/movie-tracker.git
-   cd movie-tracker
+     git clone https://github.com/tu_usuario/movie-tracker.git
+     cd movie-tracker
+     ```
   2. Abre el proyecto en Android Studio.
   3. Configura la API Key de TMDB.
   4. Configura Firebase.
