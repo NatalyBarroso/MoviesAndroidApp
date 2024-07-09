@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.moviesapp.R
-import com.example.moviesapp.WatchedDetailActivity
+import com.example.moviesapp.views.WatchedDetailActivity
 import com.example.moviesapp.models.WatchedItem
 
 class WatchedCardAdapter(private val watchedItemList: List<WatchedItem>) : RecyclerView.Adapter<WatchedCardAdapter.WatchedCardViewHolder>() {

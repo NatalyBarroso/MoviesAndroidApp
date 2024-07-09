@@ -1,12 +1,10 @@
-package com.example.moviesapp
+package com.example.moviesapp.views
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.example.moviesapp.R
 import com.example.moviesapp.adapters.ImageAdapter
 import com.example.moviesapp.databinding.ActivityHomeBinding
 import com.example.moviesapp.models.ImageItem
@@ -50,6 +48,11 @@ class HomeActivity : AppCompatActivity() {
         val imageAdapter = ImageAdapter()
         imageCarrousel.adapter = imageAdapter
         imageAdapter.submitList(imageList)
+
+        binding.catalogButton.setOnClickListener {
+            val intent = Intent(this, MovieCatalogActivity::class.java)
+            startActivity(intent)
+        }
 
         binding.watchedCardView.setOnClickListener {
             val intent = Intent(this, WatchedActivity::class.java)

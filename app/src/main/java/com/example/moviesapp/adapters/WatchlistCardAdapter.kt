@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.moviesapp.R
-import com.example.moviesapp.WatchlistDetailActivity
+import com.example.moviesapp.views.WatchlistDetailActivity
 import com.example.moviesapp.models.WatchlistItem
 
 class WatchlistCardAdapter(private var watchlistItemlist: List<WatchlistItem>) : RecyclerView.Adapter<WatchlistCardAdapter.WatchlistCardViewHolder>() {

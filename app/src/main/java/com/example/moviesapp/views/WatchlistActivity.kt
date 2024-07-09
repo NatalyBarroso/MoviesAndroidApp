@@ -1,12 +1,10 @@
-package com.example.moviesapp
+package com.example.moviesapp.views
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.moviesapp.adapters.WatchedCardAdapter
 import com.example.moviesapp.adapters.WatchlistCardAdapter
 import com.example.moviesapp.databinding.ActivityWatchlistBinding
-import com.example.moviesapp.models.WatchedItem
 import com.example.moviesapp.models.WatchlistItem
 
 class WatchlistActivity : AppCompatActivity() {
