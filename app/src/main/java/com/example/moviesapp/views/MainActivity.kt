@@ -19,5 +19,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.signUpButton.setOnClickListener {
+            var intent = Intent(this, SignUpActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
