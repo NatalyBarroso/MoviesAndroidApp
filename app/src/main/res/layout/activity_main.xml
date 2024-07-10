@@ -47,8 +47,10 @@
             android:layout_height="65dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/cyprus_border"
+            android:inputType="textEmailAddress"
             android:hint="Enter your username"
-            android:padding="10dp"/>
+            android:padding="10dp"
+            />
 
         <TextView
             android:id="@+id/passwordTextView"
@@ -66,6 +68,7 @@
             android:layout_height="65dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/cyprus_border"
+            android:inputType="textPassword"
             android:hint="Enter your password"
             android:padding="10dp"/>
 
