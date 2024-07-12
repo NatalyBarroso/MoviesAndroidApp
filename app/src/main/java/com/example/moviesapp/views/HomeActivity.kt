@@ -76,7 +76,7 @@ class HomeActivity : AppCompatActivity() {
         }
 
         binding.watchlistCardView.setOnClickListener {
-            val intent = Intent(this, WatchlistActivity::class.java)
+            val intent = Intent(this, MovieDetailActivity::class.java)
             startActivity(intent)
         }
     }

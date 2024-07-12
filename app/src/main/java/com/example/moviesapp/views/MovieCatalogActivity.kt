@@ -1,5 +1,6 @@
 package com.example.moviesapp.views
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -64,7 +65,7 @@ class MovieCatalogActivity : AppCompatActivity() {
     private fun setupRecyclerView() {
         val layoutManager = GridLayoutManager(this, 3)
         binding.movieRecycleView.layoutManager = layoutManager
-        adapter = MovieAdapter(this, arrayListOf())
+        adapter = MovieAdapter(this, arrayListOf(), viewModel, false)
         binding.movieRecycleView.adapter = adapter
+        }
     }
-}

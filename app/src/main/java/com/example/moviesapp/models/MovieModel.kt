@@ -12,5 +12,7 @@ data class MovieModel(
     @SerializedName("poster_path")
     var poster: String,
     @SerializedName("vote_average")
-    var averageVote: String
+    var averageVote: String,
+    @SerializedName("genre_ids")
+    var genres: List<Int>
 )
