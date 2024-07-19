@@ -7,7 +7,8 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface WebService {
-    @GET("movie/now_playing")
+    //@GET("movie/now_playing")
+    @GET("discover/movie")
     suspend fun getMovies(
         @Query("api_key") apiKey: String
     ): Response<MovieResponse>
@@ -21,4 +22,10 @@ interface WebService {
     suspend fun getGenres(
         @Query("api_key") apiKey: String
     ): Response<GenreResponse>
+
+    @GET("search/movie")
+    suspend fun getSearchedMovie(
+        @Query("api_key") apiKey: String,
+        @Query("query") query: String
+    ): Response<MovieResponse>
 }

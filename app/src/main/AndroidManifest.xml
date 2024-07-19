@@ -17,6 +17,9 @@
         android:theme="@style/Theme.MoviesApp"
         tools:targetApi="31">
         <activity
+            android:name=".views.WatchedDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".views.MovieDetailActivity"
             android:exported="false" />
         <activity
@@ -24,12 +27,6 @@
             android:exported="false" />
         <activity
             android:name=".views.MovieCatalogActivity"
-            android:exported="false" />
-        <activity
-            android:name=".views.WatchlistDetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".views.WatchedDetailActivity"
             android:exported="false" />
         <activity
             android:name=".views.WatchlistActivity"

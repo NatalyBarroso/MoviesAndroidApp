@@ -33,7 +33,7 @@
                 android:id="@+id/editButton"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/baseline_edit_24"
+                android:src="@drawable/baseline_check_24"
                 android:backgroundTint="@color/GulfStream"
                 android:background="@drawable/floatingbutton_shape"
                 android:layout_marginStart="16dp"/>
@@ -78,11 +78,6 @@
             android:textStyle="bold"
             android:layout_marginTop="10dp"/>
 
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -100,8 +95,6 @@
                 android:background="@drawable/cyprus_border"
                 android:layout_marginTop="10dp"
                 android:padding="10dp" />
-
-        </FrameLayout>
 
         <TextView
             android:id="@+id/genreTextView"
@@ -147,11 +140,6 @@
                 android:layout_marginStart="5dp"/>
         </LinearLayout>
 
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -169,8 +157,6 @@
                 android:background="@drawable/cyprus_border"
                 android:layout_marginTop="10dp"
                 android:padding="10dp" />
-
-        </FrameLayout>
 
     </LinearLayout>
 
